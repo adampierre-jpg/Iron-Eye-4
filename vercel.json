@@ -1,6 +1,26 @@
 {
+	"$schema": "https://openapi.vercel.sh/vercel.json",
 	"framework": "sveltekit",
 	"buildCommand": "npm run build",
-	"devCommand": "npm run dev",
-	"installCommand": "npm install"
+	"installCommand": "npm install",
+	"headers": [
+		{
+			"source": "/(.*)",
+			"headers": [
+				{
+					"key": "Permissions-Policy",
+					"value": "camera=self"
+				}
+			]
+		},
+		{
+			"source": "/manifest.json",
+			"headers": [
+				{
+					"key": "Content-Type",
+					"value": "application/manifest+json"
+				}
+			]
+		}
+	]
 }
