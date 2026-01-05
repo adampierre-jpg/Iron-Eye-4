@@ -1,0 +1,17 @@
+# dependencies
+node_modules
+
+# build output
+build
+.svelte-kit
+
+# environment
+.env
+.env.*
+!.env.example
+
+# misc
+.DS_Store
+*.log
+npm-debug.log*
+package-lock.json
